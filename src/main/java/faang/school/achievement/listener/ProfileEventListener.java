@@ -11,7 +11,7 @@ import java.util.List;
 
 @Component
 @Slf4j
-public class ProfileEventListener implements AbstractEventListener<ProfileEventDto> {
+public class ProfileEventListener extends AbstractEventListener<ProfileEventDto> {
 
     public ProfileEventListener(
             List<AbstractEventHandler<ProfileEventDto>> abstractEventHandlers,
