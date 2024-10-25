@@ -30,11 +30,27 @@ spring:
           name: like_channel
         profile-channel:
           name: profile_channel
+        comment-channel:
+          name: comment_channel
+      publisher:
+        delay: 5000
+
+  cache:
+    type: redis
+    redis:
+      cache-null-values: false
+      use-key-prefix: true
+      time-to-live: 600000
 
 achievements:
   like-achievements:
     ALL_LOVE:
       name: ALL LOVE
+  comment-achievements:
+    expert:
+      name: EXPERT
+  recursion:
+    title: RECURSION-RECURSION
   profile-achievements:
     HANDSOME:
       name: HANDSOME

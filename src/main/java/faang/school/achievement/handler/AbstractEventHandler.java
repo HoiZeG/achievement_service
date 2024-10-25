@@ -18,7 +18,8 @@ public abstract class AbstractEventHandler<T> implements EventHandler<T> {
     private final AchievementProgressHandler achievementProgressHandler;
 
     @Async("taskExecutor")
-    @Retryable(retryFor = ObjectOptimisticLockingFailureException.class,
+    @Retryable(
+            retryFor = ObjectOptimisticLockingFailureException.class,
             maxAttemptsExpression = "${retryable.max-attempts}",
             backoff = @Backoff(delayExpression = "${retryable.delay}"))
     protected void handleAchievement(Long userId, String achievementTitle) {
