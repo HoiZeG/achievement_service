@@ -21,18 +21,23 @@ spring:
     redis:
       port: 6379
       host: localhost
-      channel:
+      channels:
         achievement-channel:
           name: achievement_channel
         follower-channel:
           name: follower_channel
         like-channel:
           name: like_channel
+        profile-channel:
+          name: profile_channel
 
 achievements:
   like-achievements:
     ALL_LOVE:
       name: ALL LOVE
+  profile-achievements:
+    HANDSOME:
+      name: HANDSOME
 
 retryable:
   max-attempts: 5

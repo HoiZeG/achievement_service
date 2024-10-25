@@ -16,6 +16,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @Slf4j
 public class LikeEventListener implements MessageListener {
+
     private final List<LikeEventHandler> handlers;
     private final ObjectMapper objectMapper;
 
